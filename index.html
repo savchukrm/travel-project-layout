@@ -4,8 +4,9 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Travel Project</title>
-    <link rel="stylesheet" href="/css/main.css" />
+    <title>Travel project</title>
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/layout.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
@@ -29,16 +30,21 @@
             <div class="nav__logo">
               <h2 class="logo"><a href="#!">GoTrip</a></h2>
             </div>
-            <ul class="nav__list">
+            <ul class="nav__list nav__list--header">
               <li><a href="#!" class="active">Home</a></li>
               <li><a href="#!">Services</a></li>
               <li><a href="#!">Pricing</a></li>
               <li><a href="#!">Contact</a></li>
             </ul>
-            <ul class="nav__login">
+            <ul class="nav__login nav__login--header">
               <li><a href="#!">Sign up</a></li>
               <button class="btn btn--login"><a href="#!">Login</a></button>
             </ul>
+            <button type="button" class="nav__toggle">
+              <div class="menu-icon-wrapper">
+                <div class="menu-icon"></div>
+              </div>
+            </button>
           </nav>
         </div>
         <div class="header__row">
@@ -121,7 +127,9 @@
               <img src="./img/customers/customers.jpg" alt="customers" />
             </div>
             <div class="customers__content">
-              <h2 class="customers__title">What do customers say about us?</h2>
+              <h2 class="customers__title">
+                What do customers say about&nbsp;us?
+              </h2>
 
               <div class="review">
                 <div class="review__client">
@@ -181,29 +189,29 @@
           </div>
         </div>
       </section>
-
-      <footer class="footer">
-        <div class="container">
-          <nav class="nav">
-            <div class="nav__logo">
-              <h2 class="logo logo--footer"><a href="#!">GoTrip</a></h2>
-            </div>
-
-            <ul class="nav__list nav__list--footer">
-              <li><a href="#!" class="active">Home</a></li>
-              <li><a href="#!">Services</a></li>
-              <li><a href="#!">Pricing</a></li>
-              <li><a href="#!">Contact</a></li>
-            </ul>
-
-            <ul class="nav__login">
-              <li><a href="#!">Sign up</a></li>
-              <li><a href="#!" class="btn btn--login">Login</a></li>
-            </ul>
-          </nav>
-        </div>
-      </footer>
     </main>
+
+    <footer class="footer">
+      <div class="container">
+        <nav class="nav nav--footer">
+          <div class="nav__logo">
+            <h2 class="logo logo--footer"><a href="#!">GoTrip</a></h2>
+          </div>
+
+          <ul class="nav__list nav__list--footer">
+            <li><a href="#!" class="active">Home</a></li>
+            <li><a href="#!">Services</a></li>
+            <li><a href="#!">Pricing</a></li>
+            <li><a href="#!">Contact</a></li>
+          </ul>
+
+          <ul class="nav__login nav__login--footer">
+            <li><a href="#!">Sign up</a></li>
+            <li><a href="#!" class="btn btn--login">Login</a></li>
+          </ul>
+        </nav>
+      </div>
+    </footer>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
       referrerpolicy="no-referrer"

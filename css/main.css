@@ -137,6 +137,10 @@ body {
   font-weight: 500;
 }
 
+.nav__toggle {
+  display: none;
+}
+
 /* header content */
 
 .header__badge {
@@ -179,29 +183,18 @@ body {
   pointer-events: none;
 }
 
-.header__img::before {
-  content: '';
-
-  position: absolute;
-  width: 171px;
-  height: 50px;
-
-  left: -43px;
-  top: 536px;
-
-  background-image: url('./../img/header/el-2.svg');
-}
-
 .header__img::after {
   content: '';
 
   position: absolute;
-  width: 171px;
-  height: 50px;
+  top: -30px;
+  right: -50px;
 
-  top: 55px;
-  right: 17px;
-  background-image: url('./../img/header/el-2.svg');
+  width: 830px;
+  height: 622px;
+
+  background-image: url('./../img/header/header-elements.svg');
+  pointer-events: none;
 }
 
 /* destinations */
@@ -242,6 +235,11 @@ body {
   flex-shrink: 0;
 }
 /* slider */
+
+.owl-item {
+  display: flex;
+  justify-content: center;
+}
 
 .slider {
   position: relative;
@@ -500,4 +498,66 @@ body {
   padding: 36px 86px;
   font-size: 25px;
   border-radius: 35px;
+}
+
+.menu-icon-wrapper {
+  --time: 0.1s;
+  --width: 40px;
+  --height: 30px;
+  --line-height: 4px;
+  --color: #fff;
+
+  height: var(--height);
+  width: var(--width);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu-icon {
+  position: relative;
+  width: var(--width);
+  height: var(--line-height);
+  background-color: var(--color);
+}
+
+.menu-icon::before,
+.menu-icon::after {
+  content: '';
+  display: block;
+
+  position: absolute;
+  left: 0;
+
+  width: var(--width);
+  height: var(--line-height);
+
+  background-color: var(--color);
+  transition: transform var(--time) ease-in, top var(--time) linear var(--time);
+}
+
+.menu-icon::before {
+  top: calc(var(--line-height) * -2);
+}
+
+.menu-icon::after {
+  top: calc(var(--line-height) * 2);
+}
+
+.menu-icon.menu-icon--active {
+  background-color: transparent;
+}
+
+.menu-icon.menu-icon--active::before,
+.menu-icon.menu-icon--active::after {
+  top: 0;
+  transition: top var(--time) linear, transform var(--time) ease-in var(--time);
+}
+
+.menu-icon.menu-icon--active::before {
+  transform: rotate(45deg);
+}
+
+.menu-icon.menu-icon--active::after {
+  transform: rotate(-45deg);
 }
